@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Trình duyệt này không hỗ trợ phần tử canvas.
+</canvas>
+<script>
+var i=0;
+function draw()
+{
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.moveTo(0,0);
+if(i<200)
+i++;
+else
+return;
+ctx.lineTo(i,i/2);
+ctx.stroke();
+setTimeout("draw();",50);
+}
+draw();
+</script>
+</body>
+</html>
